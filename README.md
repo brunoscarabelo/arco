@@ -68,8 +68,14 @@ NEXT_PUBLIC_SITE_URL=https://seudominio.com.br
 
 Ela tem precedência sobre a URL da Vercel. Veja `.env.example`.
 
-## Pendências
+## Captação de leads
 
-- **A página não capta lead.** A seção `#contato` é hoje apenas visual — o
-  formulário foi removido. Todos os CTAs apontam para ela. Falta um canal de
-  contato (WhatsApp, e-mail ou um formulário com Server Action).
+Todos os CTAs da página apontam para o mesmo formulário externo, definido em
+`formUrl` no `lib/site.ts`:
+
+```
+https://traktcrm.com.br/f/ecl-rmzr-mvt
+```
+
+Trocou de formulário? É uma linha só. Os botões abrem em nova aba
+(`target="_blank"`) — para mudar isso, edite `components/ui/cta-button.tsx`.

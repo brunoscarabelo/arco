@@ -7,6 +7,8 @@ import { type Variants } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
+import { ArcoLogo } from '@/components/ui/arco-logo'
+import { formUrl } from '@/lib/site'
 
 const transitionVariants: { item: Variants } = {
     item: {
@@ -124,12 +126,15 @@ export function HeroSection() {
                                     asChild
                                     size="lg"
                                     className="rounded-xl px-5 text-base shadow-[0_18px_50px_rgba(255,255,255,.12)] transition-shadow hover:shadow-[0_22px_60px_rgba(255,255,255,.18)]">
-                                    <Link href="#contato">
+                                    <a
+                                        href={formUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer">
                                         <span className="text-nowrap">
                                             Quero atrair mais clientes
                                         </span>
                                         <ArrowRight className="ml-2 size-4" />
-                                    </Link>
+                                    </a>
                                 </Button>
                             </div>
                             <Button
@@ -138,11 +143,14 @@ export function HeroSection() {
                                 size="lg"
                                 variant="ghost"
                                 className="h-10.5 rounded-xl px-5 text-base">
-                                <Link href="#metodo">
+                                <a
+                                    href={formUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer">
                                     <span className="text-nowrap">
                                         Conhecer a estratégia
                                     </span>
-                                </Link>
+                                </a>
                             </Button>
                         </AnimatedGroup>
                     </div>
@@ -235,7 +243,7 @@ export const HeroHeader = () => {
                                 href="#top"
                                 aria-label="ARCO — início"
                                 className="flex items-center space-x-2">
-                                <Logo />
+                                <ArcoLogo className="lg:h-[18px]" />
                             </Link>
 
                             <button
@@ -282,11 +290,13 @@ export const HeroHeader = () => {
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                                 <Button asChild size="sm">
-                                    <Link
-                                        href="#contato"
+                                    <a
+                                        href={formUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         onClick={() => setMenuState(false)}>
                                         <span>Quero atrair mais clientes</span>
-                                    </Link>
+                                    </a>
                                 </Button>
                             </div>
                         </div>
@@ -294,23 +304,5 @@ export const HeroHeader = () => {
                 </div>
             </nav>
         </header>
-    )
-}
-
-const Logo = ({ className }: { className?: string }) => {
-    return (
-        <svg
-            viewBox="16.5 30 1037.5 171.5"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-hidden="true"
-            focusable="false"
-            className={cn('h-4 w-auto lg:h-[18px]', className)}>
-            <path d="M316.13,201.35h-55.55l-23.68-32.18H95.74l-23.68,32.18H16.51L128.22,51.69c9.11-11.84,22.16-21.55,38.25-21.55s29.14,9.71,37.94,21.55l111.71,149.65ZM205.02,125.46l-38.86-53.43-38.86,53.43h77.71Z" />
-            <path d="M551.69,201.35h-43.71v-43.71h-148.14v43.71h-43.71V33.78h182.74c29.14,0,52.82,23.68,52.82,52.82v18.21c0,12.75-6.07,23.68-15.18,30.96,9.11,7.29,15.18,18.21,15.18,30.96v34.61ZM507.97,113.92v-36.43h-148.14v36.43h148.14Z" />
-            <path d="M806.67,201.35h-182.74c-29.14,0-52.82-23.68-52.82-52.82v-61.93c0-29.14,23.68-52.82,52.82-52.82h182.74v43.71h-191.85v80.14h191.85v43.71Z" />
-            <path d="M1053.77,148.53c0,29.14-23.68,52.82-52.82,52.82h-129.92c-29.14,0-52.82-23.68-52.82-52.82v-61.93c0-29.14,23.68-52.82,52.82-52.82h129.92c29.14,0,52.82,23.68,52.82,52.82v61.93ZM1010.06,157.63v-80.14h-148.14v80.14h148.14Z" />
-        </svg>
     )
 }

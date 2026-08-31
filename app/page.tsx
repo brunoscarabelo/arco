@@ -1,9 +1,7 @@
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import { HeroHeader, HeroSection } from '@/components/ui/hero-section-1'
 import Velaris from '@/components/ui/velaris'
+import { CtaButton } from '@/components/ui/cta-button'
 import { SiteFooter } from '@/components/sections/site-footer'
-import { Button } from '@/components/ui/button'
 
 // referencia estavel: o useEffect do Velaris tem `colors` nas dependencias
 const VELARIS_COLORS = ['#3a3a3a', '#8a8a8a', '#1a1a1a', '#050505']
@@ -80,6 +78,11 @@ export default function Home() {
                                         contínua de aquisição de novos clientes.
                                     </span>
                                 </p>
+                                <div className="mt-2">
+                                    <CtaButton>
+                                        Quero receber mais clientes
+                                    </CtaButton>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,6 +123,10 @@ export default function Home() {
                                 </article>
                             ))}
                         </div>
+
+                        <div className="mt-[clamp(32px,4.5vw,48px)] flex justify-center">
+                            <CtaButton>Quero aplicar essa estratégia</CtaButton>
+                        </div>
                     </div>
                 </section>
 
@@ -146,16 +153,9 @@ export default function Home() {
                             Seu escritório passa a ter uma estratégia dedicada à
                             aquisição de novos clientes.
                         </p>
-                        <Button
-                            asChild
-                            size="lg"
-                            variant="outline"
-                            className="rounded-[10px] bg-transparent max-sm:w-full">
-                            <Link href="#contato">
-                                Quero conhecer a estratégia
-                                <ArrowRight className="ml-2 size-4" />
-                            </Link>
-                        </Button>
+                        <CtaButton variant="outline">
+                            Quero conhecer a estratégia
+                        </CtaButton>
                     </div>
                 </section>
 
@@ -192,6 +192,11 @@ export default function Home() {
                                     </li>
                                 ))}
                             </ul>
+                            <div className="mt-8">
+                                <CtaButton>
+                                    Quero uma análise do meu escritório
+                                </CtaButton>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -211,15 +216,9 @@ export default function Home() {
                             clientes, podemos conversar sobre como estruturar uma
                             estratégia de aquisição adequada à sua atuação.
                         </p>
-                        <Button
-                            asChild
-                            size="lg"
-                            className="rounded-[10px] shadow-[0_18px_50px_rgba(255,255,255,.12)] max-sm:w-full">
-                            <Link href="#contato">
-                                Quero mais clientes para meu escritório
-                                <ArrowRight className="ml-2 size-4" />
-                            </Link>
-                        </Button>
+                        <CtaButton>
+                            Quero mais clientes para meu escritório
+                        </CtaButton>
                     </div>
                 </section>
 
@@ -246,6 +245,9 @@ export default function Home() {
                                 desenvolver uma estratégia de aquisição de novos
                                 clientes para sua advocacia.
                             </p>
+                            <div className="mt-2">
+                                <CtaButton>Quero solicitar uma análise</CtaButton>
+                            </div>
                         </div>
                     </Velaris>
                 </section>

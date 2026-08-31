@@ -46,3 +46,6 @@ function resolveSiteUrl(): string {
 }
 
 export const siteUrl = resolveSiteUrl();
+
+/** Formulario externo de captacao — destino de todos os CTAs da pagina. */
+export const formUrl = "https://traktcrm.com.br/f/ecl-rmzr-mvt";
