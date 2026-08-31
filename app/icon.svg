@@ -1,1 +1,6 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='#050505'/><rect x='6' y='6' width='20' height='20' rx='6' fill='url(#g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='#fff'/><stop offset='1' stop-color='#8a8a8a'/></linearGradient></defs></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#050505"/>
+  <g transform="translate(4.78 4.78) scale(0.020779)" fill="#ffffff">
+    <path d="M1021.26,871.24H267.57c-116.41,0-208.83-93.61-208.83-208.83s92.41-208.83,208.83-208.83h580.87v-72.01H89.94v-172.82h722.49c115.21,0,208.83,93.61,208.83,208.83v453.66ZM848.44,698.42v-72.01H231.56v72.01h616.88Z"/>
+  </g>
+</svg>

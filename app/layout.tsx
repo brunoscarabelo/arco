@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const title = "Instância — Aquisição de clientes para advocacia previdenciária";
+const title = "ARCO";
 const description =
   "Ajudamos escritórios de Direito Previdenciário a aumentar a entrada de novos clientes com uma estratégia contínua de aquisição.";
 
