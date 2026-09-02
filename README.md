@@ -1,7 +1,7 @@
-# Instância — site
+# ARCO — site
 
-Landing page de aquisição de clientes para escritórios de advocacia
-previdenciária. Next.js (App Router) + TypeScript + Tailwind CSS v4 + shadcn/ui.
+Landing page de marketing e aquisição de clientes para escritórios de
+advocacia previdenciária. Next.js (App Router) + TypeScript + Tailwind CSS v4 + shadcn/ui.
 
 ## Rodando localmente
 
