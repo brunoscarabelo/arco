@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const title = "ARCO";
+const title = "ARCO - Marketing para Advogados";
 const description =
   "Ajudamos escritórios de Direito Previdenciário a aumentar a entrada de novos clientes com uma estratégia contínua de aquisição.";
 
