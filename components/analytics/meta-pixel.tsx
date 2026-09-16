@@ -1,6 +1,7 @@
 import Script from 'next/script'
 
-export const META_PIXEL_ID = '1064141549591538'
+export const META_PIXEL_ID_PRIMARY = '1064141549591538'
+export const META_PIXEL_ID_BACKUP = '1718649592554612'
 
 /**
  * Meta Pixel.
@@ -10,6 +11,10 @@ export const META_PIXEL_ID = '1064141549591538'
  * script assim que a pagina fica interativa, sem bloquear o primeiro render.
  * O PageView dispara uma vez no carregamento — a landing e uma pagina so, sem
  * navegacao client-side para rastrear.
+ *
+ * Dois pixels (principal + backup) reaproveitam a mesma tag fbevents.js: um
+ * fbq('init', ...) por pixel e um unico fbq('track', 'PageView') sem ID
+ * dispara o evento para todos os pixels ja inicializados.
  */
 export function MetaPixel() {
     return (
@@ -23,7 +28,8 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '${META_PIXEL_ID}');
+fbq('init', '${META_PIXEL_ID_PRIMARY}');
+fbq('init', '${META_PIXEL_ID_BACKUP}');
 fbq('track', 'PageView');`}
             </Script>
             <noscript>
@@ -32,7 +38,15 @@ fbq('track', 'PageView');`}
                     height="1"
                     width="1"
                     style={{ display: 'none' }}
-                    src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+                    src={`https://www.facebook.com/tr?id=${META_PIXEL_ID_PRIMARY}&ev=PageView&noscript=1`}
+                    alt=""
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    height="1"
+                    width="1"
+                    style={{ display: 'none' }}
+                    src={`https://www.facebook.com/tr?id=${META_PIXEL_ID_BACKUP}&ev=PageView&noscript=1`}
                     alt=""
                 />
             </noscript>
